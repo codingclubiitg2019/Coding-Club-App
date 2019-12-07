@@ -14,6 +14,7 @@
         android:layout_height="1758dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/homescreentransition" />
 
@@ -33,4 +34,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/codingclubicon"
+        android:layout_width="0dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="1155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circle"
+        app:srcCompat="@drawable/imageedit" />
+
+    <ImageView
+        android:id="@+id/ring"
+        android:layout_width="0dp"
+        android:layout_height="247dp"
+        android:layout_marginTop="1115dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circle"
+        app:srcCompat="@drawable/ic_panorama_fish_eye_black_24dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
