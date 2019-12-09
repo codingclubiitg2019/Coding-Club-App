@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "786677042891",
+    "firebase_url": "https://coding-club-app.firebaseio.com",
+    "project_id": "coding-club-app",
+    "storage_bucket": "coding-club-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786677042891:android:1ab5403fe9b937ad18554e",
+        "android_client_info": {
+          "package_name": "com.example.codingclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786677042891-j25espdmsh5nrno354uqgccv0jonti94.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.codingclub",
+            "certificate_hash": "2ceee729190301b0daa1ee6b976418a72b69f305"
+          }
+        },
+        {
+          "client_id": "786677042891-nbanoffvvqev88bu2nvlo19qdac6j4up.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrBWnm4hz2XZCXkfWlRwFZ0-eJ-fxuPFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786677042891-nbanoffvvqev88bu2nvlo19qdac6j4up.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

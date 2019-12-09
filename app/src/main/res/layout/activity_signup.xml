@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="56dp"
+        android:paddingRight="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--  Name Label -->
+
+        <EditText
+            android:id="@+id/input_name"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:hint="Name"
+            android:inputType="textCapWords"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorHint="@color/ic_launcher_background" />
+
+
+        <!-- Email Label -->
+
+        <EditText
+            android:id="@+id/input_roll"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:ems="10"
+            android:hint="Roll Number"
+            android:inputType="textCapWords"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorHint="@color/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorHint="@color/ic_launcher_background" />
+
+
+        <!-- Password Label -->
+
+        <Spinner
+            android:id="@+id/programmeSpin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background" />
+
+        <Spinner
+            android:id="@+id/departmentSpin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:entries="@array/department"
+            app:layout_constraintStart_toStartOf="parent">
+        </Spinner>
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorHint="@color/ic_launcher_background" />
+
+
+        <!-- Signup Button -->
+
+        <EditText
+            android:id="@+id/input_confirmPasswd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ic_launcher_background"
+            android:ems="10"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorHint="@color/ic_launcher_background" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:text="Create Account"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/link_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Already a member? Login"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

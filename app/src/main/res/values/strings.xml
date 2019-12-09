@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Coding Club IITG</string>
+    <string-array name="department">
+        <item>Department</item>
+        <item>Biosciences and Bioengineering</item>
+        <item>Chemical Engineering</item>
+        <item>Chemistry</item>
+        <item>Civil Engineering</item>
+        <item>Computer Science and Engineering</item>
+        <item>Design</item>
+        <item>Electronics and Electrical Engineering</item>
+        <item>Humanities and Social Sciences</item>
+        <item>Mathematics</item>
+        <item>Mechanical Engineering</item>
+        <item>Physics</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
