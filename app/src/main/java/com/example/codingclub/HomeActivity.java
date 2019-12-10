@@ -1,11 +1,13 @@
 package com.example.codingclub;
 
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
@@ -27,6 +29,7 @@ public class HomeActivity extends AppCompatActivity {
 
         //Initializing the tablayout
         //This is our tablayout
+        //Adding the tabs using addTab() method
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         for(int i = 0; i < numTabs; i++){
             tabLayout.addTab(tabLayout.newTab());
@@ -44,14 +47,19 @@ public class HomeActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
-        //Adding the tabs using addTab() method
+
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_white_48dp);
-        tabLayout.getTabAt(0).setText("Home");
-        tabLayout.getTabAt(1).setText("Events");
-        tabLayout.getTabAt(2).setText("Projects");
-        tabLayout.getTabAt(3).setText("Blogs");
-        tabLayout.getTabAt(4).setText("About Us");
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_local_library_black_48dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_important_devices_black_48dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_developer_board_black_48dp);
+        tabLayout.getTabAt(4).setIcon(R.drawable.ic_people_black_48dp);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            if (tab != null) tab.setCustomView(R.layout.home_tab);
+        }
+
     }
 
     @Override
@@ -71,6 +79,10 @@ public class HomeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_logout:
                 logout();
+                return true;
+
+            case R.id.action_developer:
+                // TO BUILD
                 return true;
 
             case R.id.action_profile:

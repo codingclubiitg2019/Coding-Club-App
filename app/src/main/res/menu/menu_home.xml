@@ -3,10 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/club_icon"
+        android:icon="@drawable/codingclubround"
+        android:title="Coding Club IITG"
+        android:enabled="false"
+        app:showAsAction="always"/>
+
+    <item
         android:id="@+id/action_profile"
-        android:icon="@drawable/ic_person_black_48dp"
+        android:icon="@drawable/ic_account_circle_white_48dp"
         android:title="Profile"
         app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_developer"
+        android:title="About developer"
+        app:showAsAction="never"/>
 
     <item android:id="@+id/action_logout"
         android:title="Log out"
