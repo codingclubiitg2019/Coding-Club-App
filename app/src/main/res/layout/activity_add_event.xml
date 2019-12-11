@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddEventActivity"
-    android:background="@color/colorPrimaryDark">
+    tools:context=".AddEventActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -55,7 +54,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@android:color/black" />
+                app:srcCompat="@android:color/white" />
 
             <ImageView
                 android:id="@+id/add_image_btn"
@@ -79,32 +78,32 @@
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ic_launcher_background"
-            android:hint="Name"
+            android:backgroundTint="@color/HintColor"
+            android:hint="Title"
             android:inputType="textCapWords"
-            android:textColor="@color/ic_launcher_background"
-            android:textColorHint="@color/NewHintColor" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/HintColor" />
 
         <EditText
             android:id="@+id/input_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/ic_launcher_background"
+            android:backgroundTint="@color/HintColor"
             android:gravity="start|top"
             android:hint="Details"
             android:inputType="textMultiLine"
-            android:textColor="@color/ic_launcher_background"
-            android:textColorHint="@color/NewHintColor" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/HintColor" />
 
         <EditText
             android:id="@+id/input_venue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/white"
+            android:backgroundTint="@color/HintColor"
             android:hint="Venue"
             android:inputType="textPersonName"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/NewHintColor" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/HintColor" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -114,13 +113,13 @@
                 android:id="@+id/input_time"
                 android:layout_width="100dp"
                 android:layout_height="0dp"
-                android:backgroundTint="@android:color/white"
+                android:backgroundTint="@color/HintColor"
                 android:focusable="false"
                 android:hint="Time"
                 android:inputType="time"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textColorHint="@color/NewHintColor"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/HintColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -129,14 +128,14 @@
                 android:layout_width="150dp"
                 android:layout_height="0dp"
                 android:layout_marginEnd="16dp"
-                android:backgroundTint="@android:color/white"
+                android:backgroundTint="@color/HintColor"
                 android:ems="10"
                 android:focusable="false"
                 android:hint="Date"
                 android:inputType="date"
                 android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textColorHint="@color/NewHintColor"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/HintColor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/input_time"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -150,11 +149,14 @@
         <Button
             android:id="@+id/btn_signup"
             android:layout_width="fill_parent"
-            android:layout_height="60dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
+            android:background="@color/colorPrimaryDark"
             android:padding="12dp"
             android:text="Add event"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
             android:textSize="14sp" />
 
     </LinearLayout>

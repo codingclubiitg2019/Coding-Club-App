@@ -3,6 +3,6 @@
     <item android:state_pressed="true"
         android:drawable="@drawable/ic_add_a_photo_pink_48dp" /> <!-- pressed -->
     <item android:state_focused="true"
-        android:drawable="@drawable/ic_add_a_photo_black_48dp" /> <!-- focused -->
-    <item android:drawable="@drawable/ic_add_a_photo_black_48dp" /> <!-- default -->
+        android:drawable="@drawable/ic_add_a_photo_blue_24dp" /> <!-- focused -->
+    <item android:drawable="@drawable/ic_add_a_photo_blue_24dp" /> <!-- default -->
 </selector>

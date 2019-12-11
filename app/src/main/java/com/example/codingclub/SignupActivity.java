@@ -218,7 +218,6 @@ public class SignupActivity extends AppCompatActivity {
                                 user.put("programme", programme);
                                 user.put("department", department);
                                 user.put("password", password);
-                                user.put("status", "student");
 
                                 db.collection("users")
                                         .add(user)

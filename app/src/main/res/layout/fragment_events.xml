@@ -8,7 +8,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-        <TextView
+    <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +19,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimaryDark"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <ImageView
