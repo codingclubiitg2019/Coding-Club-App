@@ -84,7 +84,6 @@ public class EventsFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         //creating recyclerview adapter
-
         recyclerView.setAdapter(mAdapter);
 
         return view;

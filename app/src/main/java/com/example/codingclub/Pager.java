@@ -1,18 +1,16 @@
 package com.example.codingclub;
 
-import android.util.EventLog;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class Pager extends FragmentStatePagerAdapter {
 
-    HomeFragment tab0 = null;
-    EventsFragment tab1 = null;
-    ProjectsFragment tab2 = null;
-    BlogsFragment tab3 = null;
-    AboutusFragment tab4 = null;
+    private HomeFragment tab0 = null;
+    private EventsFragment tab1 = null;
+    private ProjectsFragment tab2 = null;
+    private BlogsFragment tab3 = null;
+    private AboutusFragment tab4 = null;
 
     //integer to count number of tabs
     int tabCount;
