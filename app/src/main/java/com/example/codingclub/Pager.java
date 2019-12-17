@@ -8,6 +8,12 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class Pager extends FragmentStatePagerAdapter {
 
+    HomeFragment tab0 = null;
+    EventsFragment tab1 = null;
+    ProjectsFragment tab2 = null;
+    BlogsFragment tab3 = null;
+    AboutusFragment tab4 = null;
+
     //integer to count number of tabs
     int tabCount;
 //    private String[] tabTitles = new String[]{"Tab1", "Tab2", "Tab3"};
@@ -29,20 +35,31 @@ public class Pager extends FragmentStatePagerAdapter {
         //Returning the current tabs
         switch (position) {
             case 0:
-                HomeFragment tab0 = new HomeFragment();
+                if(tab0 == null){
+                    tab0 = new HomeFragment();
+                }
                 return tab0;
             case 1:
-                EventsFragment tab1 = new EventsFragment();
+                if(tab1 == null){
+                    tab1 = new EventsFragment();
+                }
                 return tab1;
             case 2:
-                ProjectsFragment tab2 = new ProjectsFragment();
+                if(tab2 == null){
+                    tab2 = new ProjectsFragment();
+                }
                 return tab2;
             case 3:
-                BlogsFragment tab3 = new BlogsFragment();
+                if(tab3 == null){
+                    tab3 = new BlogsFragment();
+                }
                 return tab3;
             case 4:
-                AboutusFragment tab4 = new AboutusFragment();
+                if(tab4 == null){
+                    tab4 = new AboutusFragment();
+                }
                 return tab4;
+
                 default:
                 return null;
         }

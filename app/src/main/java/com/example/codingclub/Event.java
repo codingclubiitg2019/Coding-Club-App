@@ -1,7 +1,7 @@
 package com.example.codingclub;
 
 public class Event {
-    private int id;
+    private String id;
     private String name;
     private String details;
     private String venue;
@@ -9,17 +9,17 @@ public class Event {
     private String date;
     private String image;
 
-    public Event(int id, String name, String details, String venue, String time, String date, String image) {
+    public Event(String id, Object name, Object details, Object venue, Object time, Object date, Object image) {
         this.id = id;
-        this.name = name;
-        this.details = details;
-        this.venue = venue;
-        this.time = time;
-        this.date = date;
-        this.image = image;
+        this.name = (name == null) ? "" : name.toString();
+        this.details = (details == null) ? "" : details.toString();
+        this.venue = (venue == null) ? "" : venue.toString();
+        this.time = (time == null) ? "" : time.toString();
+        this.date = (date == null) ? "" : date.toString();
+        this.image = (image == null) ? "" : image.toString();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
