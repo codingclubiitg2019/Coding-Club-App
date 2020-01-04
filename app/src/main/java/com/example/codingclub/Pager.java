@@ -22,11 +22,6 @@ public class Pager extends FragmentStatePagerAdapter {
         this.tabCount= tabCount;
     }
 
-//    @Override
-//    public CharSequence getPageTitle(int position) {
-//        return tabTitles[position];
-//    }
-
     //Overriding method getItem
     @Override
     public Fragment getItem(int position) {

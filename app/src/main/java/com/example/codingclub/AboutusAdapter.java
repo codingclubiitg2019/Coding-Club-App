@@ -15,19 +15,20 @@ import com.squareup.picasso.Target;
 
 import java.util.List;
 
-public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.MyViewHolder> {
-    List<Project> mDataset;
+public class AboutusAdapter extends RecyclerView.Adapter<AboutusAdapter.MyViewHolder> {
+    List<Team> mDataset;
+    List<String> memberNames;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        TextView nameText, detailsText, venueText, timeText, dateText, statusText;
-        ImageView posterImg;
+        TextView nameText, positionText;
+        ImageView memberImg;
         View v;
 
         Target target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                posterImg.setImageBitmap(bitmap);
+                memberImg.setImageBitmap(bitmap);
             }
 
             @Override
@@ -44,12 +45,8 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.MyView
         public MyViewHolder(View v) {
             super(v);
             nameText = v.findViewById(R.id.display_name);
-            detailsText = v.findViewById(R.id.diplay_details);
-            venueText = v.findViewById(R.id.display_venue);
-            timeText = v.findViewById(R.id.display_time);
-            dateText = v.findViewById(R.id.display_date);
-            posterImg = v.findViewById(R.id.imageView2);
-            statusText = v.findViewById(R.id.display_status);
+            positionText = v.findViewById(R.id.display_position);
+            memberImg = v.findViewById(R.id.imageView2);
             this.v = v;
         }
 
@@ -58,42 +55,37 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.MyView
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public ProjectsAdapter(List<Project> myDataset) {
+    public AboutusAdapter(List<Team> myDataset, List<String> memberNames) {
         this.mDataset = myDataset;
+        this.memberNames = memberNames;
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                        int viewType) {
+    public AboutusAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
+                                                           int viewType) {
         // create a new view
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.layout_project_card, parent, false);
-        MyViewHolder viewHolder =  new MyViewHolder(view);
+        View view = inflater.inflate(R.layout.layout_aboutus_card, parent, false);
+        AboutusAdapter.MyViewHolder viewHolder =  new AboutusAdapter.MyViewHolder(view);
         return viewHolder;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final AboutusAdapter.MyViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        Project project = mDataset.get(position);
+        Team team = mDataset.get(position);
+        String memberName = memberNames.get(position);
 
         //binding the data with the viewholder views
-        holder.nameText.setText(project.getName());
-        holder.detailsText.setText(project.getDetails());
-        holder.dateText.setText(project.getDate());
-        holder.statusText.setText(project.getStatus());
 
-        if(project.getImage() != ""){
-            holder.bindImage(project.getImage());
-        }
+        holder.positionText.setText(team.getPosition());
+        holder.nameText.setText(memberName);
     }
 
-    public void setItems(List<Project> data) {
+    public void setItems(List<Team> data, List<String> memberNames) {
         this.mDataset = data;
+        this.memberNames = memberNames;
     }
 
     // Return the size of your dataset (invoked by the layout manager)

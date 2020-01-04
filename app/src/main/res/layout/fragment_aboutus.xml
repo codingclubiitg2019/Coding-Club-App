@@ -21,7 +21,7 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/addEventBtn"
+        android:id="@+id/btn_add_member"
         android:layout_width="36sp"
         android:layout_height="36sp"
         android:layout_gravity="end"
@@ -31,5 +31,11 @@
         android:contentDescription="Add member"
         android:focusable="true"
         android:src="@drawable/fragment_add_btn" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/aboutus_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"></androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

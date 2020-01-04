@@ -38,6 +38,7 @@ import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -248,6 +249,8 @@ public class SignupActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
 
     public void createUser(final ProgressDialog progressDialog){
         String email = emailText.getText().toString();
