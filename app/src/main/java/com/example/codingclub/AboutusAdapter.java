@@ -8,27 +8,28 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import java.util.List;
+import java.util.ArrayList;
 
-public class AboutusAdapter extends RecyclerView.Adapter<AboutusAdapter.MyViewHolder> {
-    List<Team> mDataset;
-    List<String> memberNames;
+public class AboutusAdapter extends RecyclerView.Adapter<AboutusAdapter.AboutusViewHolder>
+{
+    private ArrayList<Team> mDataset;
+    private ArrayList<String> memberNames;
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
+    public static class AboutusViewHolder extends RecyclerView.ViewHolder {
         TextView nameText, positionText;
-        ImageView memberImg;
-        View v;
+        ImageView memberImage;
+        View view;
 
         Target target = new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                memberImg.setImageBitmap(bitmap);
+                memberImage.setImageBitmap(bitmap);
             }
 
             @Override
@@ -42,53 +43,50 @@ public class AboutusAdapter extends RecyclerView.Adapter<AboutusAdapter.MyViewHo
             }
         };
 
-        public MyViewHolder(View v) {
-            super(v);
-            nameText = v.findViewById(R.id.display_name);
-            positionText = v.findViewById(R.id.display_position);
-            memberImg = v.findViewById(R.id.imageView2);
-            this.v = v;
+        public AboutusViewHolder(View view) {
+            super(view);
+            nameText = view.findViewById(R.id.display_name);
+            positionText = view.findViewById(R.id.display_position);
+            memberImage = view.findViewById(R.id.imageView2);
+            this.view = view;
         }
 
         public void bindImage(String url){
-            Picasso.get().load(url).tag(v).into(target);
+            Picasso.get().load(url).tag(view).into(target);
         }
     }
 
-    public AboutusAdapter(List<Team> myDataset, List<String> memberNames) {
+    public AboutusAdapter(ArrayList<Team> myDataset, ArrayList<String> memberNames) {
         this.mDataset = myDataset;
         this.memberNames = memberNames;
     }
 
+    @NonNull
     @Override
-    public AboutusAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                                           int viewType) {
-        // create a new view
+    public AboutusViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View view = inflater.inflate(R.layout.layout_aboutus_card, parent, false);
-        AboutusAdapter.MyViewHolder viewHolder =  new AboutusAdapter.MyViewHolder(view);
-        return viewHolder;
+        return new AboutusViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(final AboutusAdapter.MyViewHolder holder, int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
+    public void onBindViewHolder(AboutusViewHolder holder, int position) {
         Team team = mDataset.get(position);
         String memberName = memberNames.get(position);
 
-        //binding the data with the viewholder views
-
         holder.positionText.setText(team.getPosition());
         holder.nameText.setText(memberName);
+
+        if(team.getImage() != ""){
+            holder.bindImage(team.getImage());
+        }
     }
 
-    public void setItems(List<Team> data, List<String> memberNames) {
+    public void setItems(ArrayList<Team> data, ArrayList<String> memberNames) {
         this.mDataset = data;
         this.memberNames = memberNames;
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return mDataset.size();
